@@ -1,0 +1,29 @@
+<table class="table">
+
+    <thead>
+
+      <tr>
+        <th scope="col">Name</th>
+	  <th scope="col">Salary</th>
+	  <th scope="col">State</th>
+	  <th scope="col">Country</th>
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor = "let employee of employees" >
+
+      <td><a [routerLink] = "['/employee', employee.id]">{{ employee.firstName }} {{ employee.lastName }}</a></td>
+	  <td>{{ employee.salary | currency}}</td>
+	  <td>{{ employee.state }}</td>
+	  <td>{{ employee.country }}</td>        
+
+      </tr>
+
+     
+
+    </tbody>
+
+  </table>
